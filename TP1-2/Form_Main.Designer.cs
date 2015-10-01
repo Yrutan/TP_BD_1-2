@@ -79,12 +79,14 @@
             this.LTSMI_InventaireAjout.Name = "LTSMI_InventaireAjout";
             this.LTSMI_InventaireAjout.Size = new System.Drawing.Size(152, 22);
             this.LTSMI_InventaireAjout.Text = "Ajout";
+            this.LTSMI_InventaireAjout.Click += new System.EventHandler(this.LTSMI_InventaireAjout_Click);
             // 
             // LTSMI_InventaireModification
             // 
             this.LTSMI_InventaireModification.Name = "LTSMI_InventaireModification";
             this.LTSMI_InventaireModification.Size = new System.Drawing.Size(152, 22);
             this.LTSMI_InventaireModification.Text = "Modification";
+            this.LTSMI_InventaireModification.Click += new System.EventHandler(this.LTSMI_InventaireModification_Click);
             // 
             // LTSMI_InventaireSupprimer
             // 
@@ -108,23 +110,26 @@
             this.LTSMI_FournisseurListe.Name = "LTSMI_FournisseurListe";
             this.LTSMI_FournisseurListe.Size = new System.Drawing.Size(152, 22);
             this.LTSMI_FournisseurListe.Text = "Liste";
+            this.LTSMI_FournisseurListe.Click += new System.EventHandler(this.LTSMI_FournisseurListe_Click);
             // 
             // LTSMI_FournisseurAjout
             // 
             this.LTSMI_FournisseurAjout.Name = "LTSMI_FournisseurAjout";
             this.LTSMI_FournisseurAjout.Size = new System.Drawing.Size(152, 22);
             this.LTSMI_FournisseurAjout.Text = "Ajout";
+            this.LTSMI_FournisseurAjout.Click += new System.EventHandler(this.LTSMI_FournisseurAjout_Click);
             // 
             // LTSMI_FournisseurModification
             // 
             this.LTSMI_FournisseurModification.Name = "LTSMI_FournisseurModification";
             this.LTSMI_FournisseurModification.Size = new System.Drawing.Size(152, 22);
             this.LTSMI_FournisseurModification.Text = "Modification";
+            this.LTSMI_FournisseurModification.Click += new System.EventHandler(this.LTSMI_FournisseurModification_Click);
             // 
             // LTSMI_FournisseurSupprimer
             // 
             this.LTSMI_FournisseurSupprimer.Name = "LTSMI_FournisseurSupprimer";
-            this.LTSMI_FournisseurSupprimer.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_FournisseurSupprimer.Size = new System.Drawing.Size(142, 22);
             this.LTSMI_FournisseurSupprimer.Text = "Supprimer";
             // 
             // rapportToolStripMenuItem
