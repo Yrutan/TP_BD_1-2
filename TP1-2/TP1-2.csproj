@@ -44,14 +44,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_FournisseurAjout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_FournisseurAjout.Designer.cs">
+      <DependentUpon>Form_FournisseurAjout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_FournisseurListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FournisseurListe.Designer.cs">
+      <DependentUpon>Form_FournisseurListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FournisseurModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FournisseurModification.Designer.cs">
+      <DependentUpon>Form_FournisseurModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InventaireAjout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_InventaireAjout.Designer.cs">
+      <DependentUpon>Form_InventaireAjout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InventaireListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_InventaireListe.Designer.cs">
+      <DependentUpon>Form_InventaireListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InventaireModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_InventaireModification.Designer.cs">
+      <DependentUpon>Form_InventaireModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="functions_BD.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
