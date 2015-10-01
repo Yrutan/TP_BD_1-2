@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TP1_2
 {
-    public partial class Form_Main : Form
+    public partial class Form_FournisseurAjout : Form
     {
-        public Form_Main()
+        public Form_FournisseurAjout()
         {
             InitializeComponent();
-        }
-
-        private void LTSMI_InventaireListe_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TP1_2
 {
-    partial class Form_Inventaire
+    partial class Form_InventaireAjout
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form_Inventaire";
+            this.Text = "Form_InventaireAjout";
         }
 
         #endregion

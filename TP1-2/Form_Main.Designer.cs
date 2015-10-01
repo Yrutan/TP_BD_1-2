@@ -30,18 +30,17 @@
         {
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.inventaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_InventaireListe = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_InventaireAjout = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_InventaireModification = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_InventaireSupprimer = new System.Windows.Forms.ToolStripMenuItem();
             this.fournisseurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_FournisseurListe = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_FournisseurAjout = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_FournisseurModification = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_FournisseurSupprimer = new System.Windows.Forms.ToolStripMenuItem();
             this.rapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeDesFournisseursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeDesProduitsSelonLesForunisseursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LTSMI_RapportListe = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,93 +59,87 @@
             // inventaireToolStripMenuItem
             // 
             this.inventaireToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listeToolStripMenuItem,
-            this.ajoutToolStripMenuItem,
-            this.modificationToolStripMenuItem,
-            this.supprimerToolStripMenuItem});
+            this.LTSMI_InventaireListe,
+            this.LTSMI_InventaireAjout,
+            this.LTSMI_InventaireModification,
+            this.LTSMI_InventaireSupprimer});
             this.inventaireToolStripMenuItem.Name = "inventaireToolStripMenuItem";
             this.inventaireToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.inventaireToolStripMenuItem.Text = "Inventaire";
             // 
-            // listeToolStripMenuItem
+            // LTSMI_InventaireListe
             // 
-            this.listeToolStripMenuItem.Name = "listeToolStripMenuItem";
-            this.listeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.listeToolStripMenuItem.Text = "Liste";
+            this.LTSMI_InventaireListe.Name = "LTSMI_InventaireListe";
+            this.LTSMI_InventaireListe.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_InventaireListe.Text = "Liste";
+            this.LTSMI_InventaireListe.Click += new System.EventHandler(this.LTSMI_InventaireListe_Click);
             // 
-            // ajoutToolStripMenuItem
+            // LTSMI_InventaireAjout
             // 
-            this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.ajoutToolStripMenuItem.Text = "Ajout";
+            this.LTSMI_InventaireAjout.Name = "LTSMI_InventaireAjout";
+            this.LTSMI_InventaireAjout.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_InventaireAjout.Text = "Ajout";
             // 
-            // modificationToolStripMenuItem
+            // LTSMI_InventaireModification
             // 
-            this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.modificationToolStripMenuItem.Text = "Modification";
+            this.LTSMI_InventaireModification.Name = "LTSMI_InventaireModification";
+            this.LTSMI_InventaireModification.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_InventaireModification.Text = "Modification";
             // 
-            // supprimerToolStripMenuItem
+            // LTSMI_InventaireSupprimer
             // 
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.LTSMI_InventaireSupprimer.Name = "LTSMI_InventaireSupprimer";
+            this.LTSMI_InventaireSupprimer.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_InventaireSupprimer.Text = "Supprimer";
             // 
             // fournisseurToolStripMenuItem
             // 
             this.fournisseurToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listeToolStripMenuItem1,
-            this.ajoutToolStripMenuItem1,
-            this.modificationToolStripMenuItem1,
-            this.supprimerToolStripMenuItem1});
+            this.LTSMI_FournisseurListe,
+            this.LTSMI_FournisseurAjout,
+            this.LTSMI_FournisseurModification,
+            this.LTSMI_FournisseurSupprimer});
             this.fournisseurToolStripMenuItem.Name = "fournisseurToolStripMenuItem";
             this.fournisseurToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.fournisseurToolStripMenuItem.Text = "Fournisseur";
             // 
-            // listeToolStripMenuItem1
+            // LTSMI_FournisseurListe
             // 
-            this.listeToolStripMenuItem1.Name = "listeToolStripMenuItem1";
-            this.listeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.listeToolStripMenuItem1.Text = "Liste";
+            this.LTSMI_FournisseurListe.Name = "LTSMI_FournisseurListe";
+            this.LTSMI_FournisseurListe.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_FournisseurListe.Text = "Liste";
             // 
-            // ajoutToolStripMenuItem1
+            // LTSMI_FournisseurAjout
             // 
-            this.ajoutToolStripMenuItem1.Name = "ajoutToolStripMenuItem1";
-            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.ajoutToolStripMenuItem1.Text = "Ajout";
+            this.LTSMI_FournisseurAjout.Name = "LTSMI_FournisseurAjout";
+            this.LTSMI_FournisseurAjout.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_FournisseurAjout.Text = "Ajout";
             // 
-            // modificationToolStripMenuItem1
+            // LTSMI_FournisseurModification
             // 
-            this.modificationToolStripMenuItem1.Name = "modificationToolStripMenuItem1";
-            this.modificationToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.modificationToolStripMenuItem1.Text = "Modification";
+            this.LTSMI_FournisseurModification.Name = "LTSMI_FournisseurModification";
+            this.LTSMI_FournisseurModification.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_FournisseurModification.Text = "Modification";
             // 
-            // supprimerToolStripMenuItem1
+            // LTSMI_FournisseurSupprimer
             // 
-            this.supprimerToolStripMenuItem1.Name = "supprimerToolStripMenuItem1";
-            this.supprimerToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.supprimerToolStripMenuItem1.Text = "Supprimer";
+            this.LTSMI_FournisseurSupprimer.Name = "LTSMI_FournisseurSupprimer";
+            this.LTSMI_FournisseurSupprimer.Size = new System.Drawing.Size(152, 22);
+            this.LTSMI_FournisseurSupprimer.Text = "Supprimer";
             // 
             // rapportToolStripMenuItem
             // 
             this.rapportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listeDesFournisseursToolStripMenuItem,
-            this.listeDesProduitsSelonLesForunisseursToolStripMenuItem});
+            this.LTSMI_RapportListe});
             this.rapportToolStripMenuItem.Name = "rapportToolStripMenuItem";
             this.rapportToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.rapportToolStripMenuItem.Text = "Rapport";
             // 
-            // listeDesFournisseursToolStripMenuItem
+            // LTSMI_RapportListe
             // 
-            this.listeDesFournisseursToolStripMenuItem.Name = "listeDesFournisseursToolStripMenuItem";
-            this.listeDesFournisseursToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
-            this.listeDesFournisseursToolStripMenuItem.Text = "Liste des fournisseurs";
-            // 
-            // listeDesProduitsSelonLesForunisseursToolStripMenuItem
-            // 
-            this.listeDesProduitsSelonLesForunisseursToolStripMenuItem.Name = "listeDesProduitsSelonLesForunisseursToolStripMenuItem";
-            this.listeDesProduitsSelonLesForunisseursToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
-            this.listeDesProduitsSelonLesForunisseursToolStripMenuItem.Text = "Liste des produits selon les forunisseurs";
+            this.LTSMI_RapportListe.Name = "LTSMI_RapportListe";
+            this.LTSMI_RapportListe.Size = new System.Drawing.Size(186, 22);
+            this.LTSMI_RapportListe.Text = "Liste des fournisseurs";
             // 
             // Form_Main
             // 
@@ -155,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(525, 360);
             this.Controls.Add(this.menuStrip2);
             this.Name = "Form_Main";
-            this.Text = "Form1";
+            this.Text = "Nous travaillons pour vous soulager";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -167,18 +160,17 @@
 
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem inventaireToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_InventaireListe;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_InventaireAjout;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_InventaireModification;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_InventaireSupprimer;
         private System.Windows.Forms.ToolStripMenuItem fournisseurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_FournisseurListe;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_FournisseurAjout;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_FournisseurModification;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_FournisseurSupprimer;
         private System.Windows.Forms.ToolStripMenuItem rapportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listeDesFournisseursToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listeDesProduitsSelonLesForunisseursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem LTSMI_RapportListe;
     }
 }
 

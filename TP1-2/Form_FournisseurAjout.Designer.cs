@@ -1,6 +1,6 @@
 ﻿namespace TP1_2
 {
-    partial class Form_Fournisseur
+    partial class Form_FournisseurAjout
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form_Fournisseur";
+            this.Text = "Form_FournisseurAjout";
         }
 
         #endregion

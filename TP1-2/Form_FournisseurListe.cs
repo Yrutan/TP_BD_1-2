@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP1_2
 {
-    public partial class Form_Inventaire : Form
+    public partial class Form_FournisseurListe : Form
     {
-        public Form_Inventaire()
+        public Form_FournisseurListe()
         {
             InitializeComponent();
         }
