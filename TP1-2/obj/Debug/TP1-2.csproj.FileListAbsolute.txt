@@ -1,1 +1,2 @@
 C:\Users\201086438\Desktop\TP1-2\TP1-2\bin\Debug\TP1-2.exe.config
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\bin\Debug\TP1-2.exe.config
