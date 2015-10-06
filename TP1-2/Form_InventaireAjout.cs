@@ -16,5 +16,9 @@ namespace TP1_2
         {
             InitializeComponent();
         }
+
+        // vérifier si un fournisseur existe
+        // sinon ne pas afficher la fenetre et faire un popup
+        // faire ça dans le main form
     }
 }

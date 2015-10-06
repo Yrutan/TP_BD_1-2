@@ -30,7 +30,12 @@ namespace TP1_2
 
             if(form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                // vérifier si un fournisseur existe
+                // sinon ne pas afficher la fenetre et faire un popup
+                // faire ça dans le main form
+
                 //code pour ajout
+
             }
             else
             {
@@ -46,6 +51,8 @@ namespace TP1_2
             if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 //code pour update
+                // ne peut pas descendre en dessous de zéro (valeur négative)
+                // catch erreur du trigger et faire un popup ?
             }
         }
 
