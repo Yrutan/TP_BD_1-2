@@ -28,11 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.BTN_Annuler = new System.Windows.Forms.Button();
+            this.BTN_Accept = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // BTN_Annuler
+            // 
+            this.BTN_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Annuler.Location = new System.Drawing.Point(197, 227);
+            this.BTN_Annuler.Name = "BTN_Annuler";
+            this.BTN_Annuler.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Annuler.TabIndex = 3;
+            this.BTN_Annuler.Text = "Annuler";
+            this.BTN_Annuler.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Accept
+            // 
+            this.BTN_Accept.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_Accept.Location = new System.Drawing.Point(22, 227);
+            this.BTN_Accept.Name = "BTN_Accept";
+            this.BTN_Accept.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Accept.TabIndex = 4;
+            this.BTN_Accept.Text = "Modifier";
+            this.BTN_Accept.UseVisualStyleBackColor = true;
+            // 
+            // Form_InventaireModification
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(292, 262);
+            this.Controls.Add(this.BTN_Annuler);
+            this.Controls.Add(this.BTN_Accept);
+            this.Name = "Form_InventaireModification";
             this.Text = "Form_InventaireModification";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button BTN_Annuler;
+        private System.Windows.Forms.Button BTN_Accept;
     }
 }
