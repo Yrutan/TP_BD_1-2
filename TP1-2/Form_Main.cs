@@ -17,50 +17,95 @@ namespace TP1_2
             InitializeComponent();
         }
 
+
+        private bool checkForInventaire()
+        {
+            bool existe = false;
+            // select Inventaire
+
+
+            return existe;
+        }
+
+        private bool checkForFournisseur()
+        {
+            bool existe = false;
+            // select Fournisseur
+
+
+            return existe;
+        }
+
+
         private void LTSMI_InventaireListe_Click(object sender, EventArgs e)
         {
-            Form_InventaireListe form = new Form_InventaireListe();
+            if(checkForInventaire())
+            {
+                Form_InventaireListe form = new Form_InventaireListe();
 
-            form.ShowDialog();
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Il doit exister un item dans l'inventaire pour pouvoir afficher la liste!");
+            }
         }
 
         private void LTSMI_InventaireAjout_Click(object sender, EventArgs e)
         {
-            Form_InventaireAjout form = new Form_InventaireAjout();
-
-            if(form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            // vérifier si un fournisseur existe
+            if(checkForFournisseur())
             {
-                // vérifier si un fournisseur existe
-                // sinon ne pas afficher la fenetre et faire un popup
-                // faire ça dans le main form
+                Form_InventaireAjout form = new Form_InventaireAjout();
+                if(form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //code pour ajout
+                    // ou dans le form ajouter ?
 
-                //code pour ajout
-
+                }
+                else
+                {
+                    // rien, l'opération est annulé
+                }
             }
             else
             {
-                // rien, l'opération est annulé
+                MessageBox.Show("Un fournisseur doit exister pour pouvoir ajouter un item à l'inventaire!");
             }
-
         }
 
         private void LTSMI_InventaireModification_Click(object sender, EventArgs e)
         {
-            Form_InventaireModification form = new Form_InventaireModification();
-
-            if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if(checkForInventaire())
             {
-                //code pour update
-                // ne peut pas descendre en dessous de zéro (valeur négative)
-                // catch erreur du trigger et faire un popup ?
+                Form_InventaireModification form = new Form_InventaireModification();
+
+                if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {   
+                    //code pour update
+                    // ne peut pas descendre en dessous de zéro (valeur négative)
+                    // faire un trigger sur la colonne ?
+                    // catch erreur du trigger et faire un popup ?
+                }
+            }
+            else
+            {
+                MessageBox.Show("Il doit exister un item dans l'inventaire pour pouvoir le modifier!");
             }
         }
 
         private void LTSMI_FournisseurListe_Click(object sender, EventArgs e)
         {
-            Form_FournisseurListe form = new Form_FournisseurListe();
+            if(checkForFournisseur())
+            {
+                Form_FournisseurListe form = new Form_FournisseurListe();
 
-            form.ShowDialog();
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Un fournisseur doit exister pour pouvoir la liste des fournisseurs!");
+            }
         }
 
         private void LTSMI_FournisseurAjout_Click(object sender, EventArgs e)
@@ -75,11 +120,18 @@ namespace TP1_2
 
         private void LTSMI_FournisseurModification_Click(object sender, EventArgs e)
         {
-            Form_FournisseurModification form = new Form_FournisseurModification();
-
-            if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if(checkForFournisseur())
             {
-                //code pour update
+                Form_FournisseurModification form = new Form_FournisseurModification();
+
+                if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //code pour update
+                }
+            }
+            else
+            {
+                MessageBox.Show("Un fournisseur doit exister pour pouvoir en modifier un!");
             }
         }
 
