@@ -28,11 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.DGV_Liste = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Liste)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // DGV_Liste
+            // 
+            this.DGV_Liste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Liste.Location = new System.Drawing.Point(12, 12);
+            this.DGV_Liste.Name = "DGV_Liste";
+            this.DGV_Liste.Size = new System.Drawing.Size(447, 350);
+            this.DGV_Liste.TabIndex = 1;
+            // 
+            // Form_InventaireListe
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(478, 372);
+            this.Controls.Add(this.DGV_Liste);
+            this.Name = "Form_InventaireListe";
             this.Text = "Form_Inventaire";
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Liste)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView DGV_Liste;
     }
 }
