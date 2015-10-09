@@ -55,6 +55,7 @@
             this.BTN_Accept.TabIndex = 0;
             this.BTN_Accept.Text = "Ajouter";
             this.BTN_Accept.UseVisualStyleBackColor = true;
+            this.BTN_Accept.Click += new System.EventHandler(this.BTN_Accept_Click);
             // 
             // BTN_Annuler
             // 

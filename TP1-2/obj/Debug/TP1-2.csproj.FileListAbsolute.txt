@@ -9,3 +9,15 @@ C:\Users\201086438\Desktop\TP1-2\TP1-2\obj\Debug\TP1-2.csproj.GenerateResource.C
 C:\Users\201086438\Desktop\TP1-2\TP1-2\obj\Debug\TP1-2.exe
 C:\Users\201086438\Desktop\TP1-2\TP1-2\obj\Debug\TP1-2.pdb
 C:\Users\201086438\Desktop\TP_BD_1-2\TP1-2\bin\Debug\TP1-2.exe.config
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1-2.exe
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1-2.pdb
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\bin\Debug\TP1-2.exe
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\bin\Debug\TP1-2.pdb
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1-2.csprojResolveAssemblyReference.cache
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Form_FournisseurAjout.resources
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Form_FournisseurModification.resources
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Form_InventaireAjout.resources
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Form_InventaireModification.resources
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Form_Main.resources
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Properties.Resources.resources
+C:\Users\201087112\Desktop\TP_BD_1-2\TP1-2\obj\Debug\TP1-2.csproj.GenerateResource.Cache

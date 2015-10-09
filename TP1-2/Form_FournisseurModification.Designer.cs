@@ -65,6 +65,7 @@
             this.BTN_Accept.TabIndex = 2;
             this.BTN_Accept.Text = "Modifier";
             this.BTN_Accept.UseVisualStyleBackColor = true;
+            this.BTN_Accept.Click += new System.EventHandler(this.BTN_Accept_Click);
             // 
             // TBX_Courriel
             // 

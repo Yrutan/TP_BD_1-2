@@ -22,7 +22,7 @@ namespace TP1_2
         private bool checkForInventaire()
         {
             bool existe = false;
-            String sqlString = "SELECT FROM Inventaire";
+            String sqlString = "SELECT * FROM Inventaire";
             SqlCommand command = new SqlCommand(sqlString,Program.connection);
             SqlDataReader dataReader = command.ExecuteReader();
             int i = 0;
@@ -135,10 +135,8 @@ namespace TP1_2
         {
             Form_FournisseurAjout form = new Form_FournisseurAjout();
 
-            if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                //code pour ajout
-            }
+            form.ShowDialog();
+
         }
 
         private void LTSMI_FournisseurModification_Click(object sender, EventArgs e)
