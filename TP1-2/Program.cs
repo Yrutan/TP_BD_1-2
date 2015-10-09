@@ -29,8 +29,11 @@ namespace TP1_2
             String userId = "conOperation";
             // password est le mot de passe du user ID pour se connecter à la bd
             String pass = "conOperation";
-            String chaineConnection = "Data Source="+dataSource+";Initial Catalog="+nameBD+";User ID="+ userId +";Password=" + pass;
+
+            String chaineConnection = @"Data Source=.\SQLEXPRESS; AttachDBFilename=BDOperation.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            //String chaineConnection = "Data Source="+dataSource+";Initial Catalog="+nameBD+";User ID="+ userId +";Password=" + pass;
             connection = new SqlConnection(chaineConnection);
+ 
             try
             {
                 connection.Open();
