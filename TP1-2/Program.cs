@@ -22,16 +22,15 @@ namespace TP1_2
         {
             //les valeurs sont celles par défaut de l'exemple
             // datasource est le chemin à la bd ?
-            String dataSource = @"local";
+            String dataSource = System.Environment.MachineName +"\\SQLEXPRESS2012";
             // initial Catalog est le nom de la bd
-            String nameBD = "BDOperation.mdf";
+            String nameBD = "bdOperation";
             // user ID est le nom utiliser pour la connection à la bd
             String userId = "conOperation";
             // password est le mot de passe du user ID pour se connecter à la bd
             String pass = "conOperation";
 
-            String chaineConnection = @"Data Source=.\SQLEXPRESS; AttachDBFilename=BDOperation.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-            //String chaineConnection = "Data Source="+dataSource+";Initial Catalog="+nameBD+";User ID="+ userId +";Password=" + pass;
+            String chaineConnection = "Data Source="+dataSource+";Initial Catalog="+nameBD+";User ID="+ userId +";Password=" + pass;
             connection = new SqlConnection(chaineConnection);
  
             try

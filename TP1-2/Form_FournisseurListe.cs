@@ -13,15 +13,19 @@ namespace TP1_2
 {
     public partial class Form_FournisseurListe : Form
     {
-        DataSet dataSet = new DataSet();
+        DataTable dataSet = new DataTable();
         public Form_FournisseurListe()
         {
             InitializeComponent();
 
-            String sqlString = "SELECT IdFournisseur, NomFournisseur, VilleFournisseur, CPFournisseur, TelFournisseur, SoldeFournisseur, FROM Fournisseur";
-            SqlDataAdapter command = new SqlDataAdapter(sqlString, Program.connection);
-            command.Fill(dataSet);
+        }
 
+        private void Form_FournisseurListe_Load(object sender, EventArgs e)
+        {
+            String sqlString = "SELECT IdFournisseur, NomFournisseur, VilleFournisseur, CPFournisseur, TelFournisseur, SoldeFournisseur FROM Fournisseur";
+            
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            commandAdapter.Fill(dataSet);
             DGV_Liste.DataSource = dataSet;
         }
     }

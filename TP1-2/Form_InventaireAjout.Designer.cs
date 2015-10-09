@@ -44,6 +44,8 @@
             // 
             // BTN_Annuler
             // 
+            this.BTN_Annuler.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BTN_Annuler.Location = new System.Drawing.Point(155, 179);
             this.BTN_Annuler.Name = "BTN_Annuler";
@@ -110,6 +112,8 @@
             // 
             // TBX_Description
             // 
+            this.TBX_Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TBX_Description.Location = new System.Drawing.Point(130, 6);
             this.TBX_Description.Name = "TBX_Description";
             this.TBX_Description.Size = new System.Drawing.Size(100, 20);
@@ -117,6 +121,8 @@
             // 
             // TBX_QStock
             // 
+            this.TBX_QStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TBX_QStock.Location = new System.Drawing.Point(130, 69);
             this.TBX_QStock.Name = "TBX_QStock";
             this.TBX_QStock.Size = new System.Drawing.Size(100, 20);
@@ -124,6 +130,8 @@
             // 
             // TBX_QMin
             // 
+            this.TBX_QMin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TBX_QMin.Location = new System.Drawing.Point(130, 98);
             this.TBX_QMin.Name = "TBX_QMin";
             this.TBX_QMin.Size = new System.Drawing.Size(100, 20);
@@ -131,6 +139,8 @@
             // 
             // TBX_QMax
             // 
+            this.TBX_QMax.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TBX_QMax.Location = new System.Drawing.Point(130, 127);
             this.TBX_QMax.Name = "TBX_QMax";
             this.TBX_QMax.Size = new System.Drawing.Size(100, 20);
@@ -138,6 +148,8 @@
             // 
             // CBX_Fournisseur
             // 
+            this.CBX_Fournisseur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CBX_Fournisseur.FormattingEnabled = true;
             this.CBX_Fournisseur.Location = new System.Drawing.Point(130, 35);
             this.CBX_Fournisseur.Name = "CBX_Fournisseur";

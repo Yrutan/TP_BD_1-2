@@ -13,6 +13,7 @@ namespace TP1_2
 {
     public partial class Form_InventaireAjout : Form
     {
+        DataTable dt_Fournisseur = new DataTable();
         public Form_InventaireAjout()
         {
             InitializeComponent();
@@ -22,6 +23,14 @@ namespace TP1_2
 
         private void fillCBX_Fournisseur()
         {
+            String sqlString = "SELECT IdFournisseur, NomFournisseur FROM Fournisseur";
+            
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            commandAdapter.Fill(dt_Fournisseur);
+            CBX_Fournisseur.DataSource = dt_Fournisseur;
+            CBX_Fournisseur.DisplayMember = "NomFournisseur";
+            CBX_Fournisseur.ValueMember = "IdFournisseur";
+            CBX_Fournisseur.BindingContext = this.BindingContext;
 
         }
 
@@ -29,7 +38,7 @@ namespace TP1_2
         {
             if (IsValidValue())
             {
-                Ajouter(TBX_Description.Text, CBX_Fournisseur.Text, TBX_QStock.Text, TBX_QMin.Text, TBX_QMax.Text);
+                Ajouter(TBX_Description.Text, CBX_Fournisseur.SelectedValue.ToString() , TBX_QStock.Text, TBX_QMin.Text, TBX_QMax.Text);
                 ClearTextBox();
             }
             else

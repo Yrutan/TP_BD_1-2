@@ -14,15 +14,18 @@ namespace TP1_2
     public partial class Form_InventaireListe : Form
     {
 
-        DataSet dataSet = new DataSet();
+        DataTable dataSet = new DataTable();
         public Form_InventaireListe()
         {
             InitializeComponent();
+        }
 
-            String sqlString = "SELECT FROM Inventaire";
-            SqlDataAdapter command = new SqlDataAdapter(sqlString, Program.connection);
-            command.Fill(dataSet);
-
+        private void Form_InventaireListe_Load(object sender, EventArgs e)
+        {
+            String sqlString = "SELECT IdInventaire, DescriptionInventaire, IdFournisseur, QteStock, QteMinimum, QteMaximum FROM Inventaire";
+            
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            commandAdapter.Fill(dataSet);
             DGV_Liste.DataSource = dataSet;
         }
     }

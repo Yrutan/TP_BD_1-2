@@ -74,7 +74,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nom du frounisseur : ";
+            this.label1.Text = "Nom du fournisseur : ";
             // 
             // label2
             // 

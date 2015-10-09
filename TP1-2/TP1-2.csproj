@@ -92,11 +92,17 @@
     <EmbeddedResource Include="Form_FournisseurAjout.resx">
       <DependentUpon>Form_FournisseurAjout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_FournisseurListe.resx">
+      <DependentUpon>Form_FournisseurListe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_FournisseurModification.resx">
       <DependentUpon>Form_FournisseurModification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_InventaireAjout.resx">
       <DependentUpon>Form_InventaireAjout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_InventaireListe.resx">
+      <DependentUpon>Form_InventaireListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_InventaireModification.resx">
       <DependentUpon>Form_InventaireModification.cs</DependentUpon>
