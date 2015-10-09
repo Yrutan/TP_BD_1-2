@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TP1_2
 {
@@ -25,13 +26,10 @@ namespace TP1_2
         private void UpdateFournisseur(String id)
         {
 
-            String updateQuery = "UPDATE FOURNISSEUR SET NomFournisseur = '" + TBX_Nom.Text + "'," +
-                                 " AdFournisseur ='" + TBX_Adresse.Text + "'," +
-                                 " VilleFournisseur = '" + TBX_Ville.Text + "'," +
-                                 " CPFournisseur = '" + TBX_CP.Text + "'," +
-                                 " TelFournisseur =" + TBX_Telephone.Text + "," +
-                                 " SoldeFournisseur = '" + TBX_Solde.Text + "' " +
-                                 " CourrielFournisseur = '" + TBX_Courriel.Text + "' " +
+            String updateQuery = "UPDATE INVENTAIRE SET DescriptionFournisseur = '" + TBX_Description.Text + "'," +
+                                 " Qte_Stock ='" + TBX_QStock.Text + "'," +
+                                 " Qte_Minimum = '" + TBX_QMin.Text + "'," +
+                                 " Qte_Maximum = '" + TBX_QMax.Text + "'," +
                                  " WHERE IdFournisseur =" + id;
             MessageBox.Show(updateQuery);
             SqlCommand update = new SqlCommand(updateQuery, Program.connection);
