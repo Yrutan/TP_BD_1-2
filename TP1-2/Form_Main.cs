@@ -44,7 +44,7 @@ namespace TP1_2
         private bool checkForFournisseur()
         {
             bool existe = false;
-            String sqlString = "SELECT FROM Fournisseur";
+            String sqlString = "SELECT * FROM Fournisseur";
             SqlCommand command = new SqlCommand(sqlString, Program.connection);
             SqlDataReader dataReader = command.ExecuteReader();
             int i = 0;
@@ -81,15 +81,10 @@ namespace TP1_2
         private void LTSMI_InventaireAjout_Click(object sender, EventArgs e)
         {
             // vérifier si un fournisseur existe
-            if(checkForFournisseur())
+            if (checkForFournisseur())
             {
                 Form_InventaireAjout form = new Form_InventaireAjout();
-                if(form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    //code pour ajout
-                    // ou dans le form ajouter ?
-
-                }
+                form.ShowDialog();
             }
             else
             {
@@ -103,13 +98,8 @@ namespace TP1_2
             {
                 Form_InventaireModification form = new Form_InventaireModification();
 
-                if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {   
-                    //code pour update
-                    // ne peut pas descendre en dessous de zéro (valeur négative)
-                    // faire un trigger sur la colonne ?
-                    // catch erreur du trigger et faire un popup ?
-                }
+                form.ShowDialog();
+
             }
             else
             {
@@ -145,10 +135,8 @@ namespace TP1_2
             {
                 Form_FournisseurModification form = new Form_FournisseurModification();
 
-                if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    //code pour update
-                }
+                form.ShowDialog();
+
             }
             else
             {
