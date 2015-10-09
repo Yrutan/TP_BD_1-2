@@ -15,6 +15,8 @@ namespace TP1_2
     {
         String id;
 
+        DataTable dt_Fournisseur = new DataTable();
+
         public Form_FournisseurModification()
         {
             InitializeComponent();
@@ -36,14 +38,14 @@ namespace TP1_2
         private void UpdateFournisseur(String id)
         {
 
-            String updateQuery = "UPDATE FOURNISSEUR SET NomFournisseur = '" + TBX_Nom.Text + "'," +
+            String updateQuery = "UPDATE FOURNISSEUR SET NomFournisseur = '" + CBX_Fournisseur.SelectedText + "'," +
                                  " AdFournisseur ='" + TBX_Adresse.Text + "'," +
                                  " VilleFournisseur = '" + TBX_Ville.Text + "'," +
                                  " CPFournisseur = '" + TBX_CP.Text + "'," +
                                  " TelFournisseur =" + TBX_Telephone.Text + "," +
                                  " SoldeFournisseur = '" + TBX_Solde.Text + "' " +
                                  " CourrielFournisseur = '" + TBX_Courriel.Text + "' " +
-                                 " WHERE IdFournisseur =" + id;
+                                 " WHERE IdFournisseur =" + CBX_Fournisseur.SelectedValue;
             MessageBox.Show(updateQuery);
             SqlCommand update = new SqlCommand(updateQuery, Program.connection);
             try
@@ -61,7 +63,6 @@ namespace TP1_2
 
         private void ClearTextBox()
         {
-            TBX_Nom.Text = "";
             TBX_Adresse.Text = "";
             TBX_Ville.Text = "";
             TBX_CP.Text = "";
@@ -80,7 +81,6 @@ namespace TP1_2
                     && !String.IsNullOrEmpty(TBX_Solde.Text)
                     && !String.IsNullOrEmpty(TBX_Telephone.Text)
                     && !String.IsNullOrEmpty(TBX_Ville.Text)
-                    && !String.IsNullOrEmpty(TBX_Nom.Text)
                     && !String.IsNullOrEmpty(TBX_Courriel.Text)
                     && Int32.Parse(TBX_Solde.Text) >= 0)
                 {
@@ -98,6 +98,37 @@ namespace TP1_2
                 isvalid = false;
             }
             return isvalid;
+        }
+
+        private void Form_FournisseurModification_Load(object sender, EventArgs e)
+        {
+            fillCBX_Fournisseur();
+        }
+        private void fillCBX_Fournisseur()
+        {
+            String sqlString = "SELECT IdFournisseur, NomFournisseur, AdFournisseur, VilleFournisseur, CPFournisseur, TelFournisseur, SoldeFournisseur, CourrielFournisseur FROM Fournisseur";
+
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            commandAdapter.Fill(dt_Fournisseur);
+            CBX_Fournisseur.DataSource = dt_Fournisseur;
+            CBX_Fournisseur.DisplayMember = "NomFournisseur";
+            CBX_Fournisseur.ValueMember = "IdFournisseur";
+            CBX_Fournisseur.BindingContext = this.BindingContext;
+
+            CBX_Fournisseur.SelectedIndex = 0;
+        }
+
+        private void CBX_Fournisseur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(CBX_Fournisseur.SelectedIndex > 0)
+            {
+                TBX_Adresse.Text = dt_Fournisseur.Rows[CBX_Fournisseur.SelectedIndex][2].ToString();
+                TBX_Ville.Text = dt_Fournisseur.Rows[CBX_Fournisseur.SelectedIndex][3].ToString();
+                TBX_CP.Text = dt_Fournisseur.Rows[CBX_Fournisseur.SelectedIndex][4].ToString();
+                TBX_Telephone.Text = dt_Fournisseur.Rows[CBX_Fournisseur.SelectedIndex][5].ToString();
+                TBX_Solde.Text = dt_Fournisseur.Rows[CBX_Fournisseur.SelectedIndex][6].ToString();
+                TBX_Courriel.Text = dt_Fournisseur.Rows[CBX_Fournisseur.SelectedIndex][7].ToString();
+            }
         }
     }
 }

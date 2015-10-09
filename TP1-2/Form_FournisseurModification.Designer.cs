@@ -36,7 +36,6 @@
             this.TBX_CP = new System.Windows.Forms.TextBox();
             this.TBX_Ville = new System.Windows.Forms.TextBox();
             this.TBX_Adresse = new System.Windows.Forms.TextBox();
-            this.TBX_Nom = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.CBX_Fournisseur = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BTN_Annuler
@@ -109,13 +109,6 @@
             this.TBX_Adresse.Size = new System.Drawing.Size(109, 20);
             this.TBX_Adresse.TabIndex = 17;
             // 
-            // TBX_Nom
-            // 
-            this.TBX_Nom.Location = new System.Drawing.Point(153, 7);
-            this.TBX_Nom.Name = "TBX_Nom";
-            this.TBX_Nom.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Nom.TabIndex = 18;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -177,20 +170,29 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Nom du frounisseur : ";
+            this.label1.Text = "Nom du fournisseur : ";
+            // 
+            // CBX_Fournisseur
+            // 
+            this.CBX_Fournisseur.FormattingEnabled = true;
+            this.CBX_Fournisseur.Location = new System.Drawing.Point(153, 6);
+            this.CBX_Fournisseur.Name = "CBX_Fournisseur";
+            this.CBX_Fournisseur.Size = new System.Drawing.Size(109, 21);
+            this.CBX_Fournisseur.TabIndex = 19;
+            this.CBX_Fournisseur.SelectedIndexChanged += new System.EventHandler(this.CBX_Fournisseur_SelectedIndexChanged);
             // 
             // Form_FournisseurModification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 231);
+            this.Controls.Add(this.CBX_Fournisseur);
             this.Controls.Add(this.TBX_Courriel);
             this.Controls.Add(this.TBX_Solde);
             this.Controls.Add(this.TBX_Telephone);
             this.Controls.Add(this.TBX_CP);
             this.Controls.Add(this.TBX_Ville);
             this.Controls.Add(this.TBX_Adresse);
-            this.Controls.Add(this.TBX_Nom);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -202,6 +204,7 @@
             this.Controls.Add(this.BTN_Accept);
             this.Name = "Form_FournisseurModification";
             this.Text = "Form_FournisseurModification";
+            this.Load += new System.EventHandler(this.Form_FournisseurModification_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,7 +220,6 @@
         private System.Windows.Forms.TextBox TBX_CP;
         private System.Windows.Forms.TextBox TBX_Ville;
         private System.Windows.Forms.TextBox TBX_Adresse;
-        private System.Windows.Forms.TextBox TBX_Nom;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
@@ -225,5 +227,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CBX_Fournisseur;
     }
 }
