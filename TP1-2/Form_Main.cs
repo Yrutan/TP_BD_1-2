@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TP1_2
 {
@@ -21,8 +22,21 @@ namespace TP1_2
         private bool checkForInventaire()
         {
             bool existe = false;
-            // select Inventaire
+            String sqlString = "SELECT FROM Inventaire";
+            SqlCommand command = new SqlCommand(sqlString,Program.connection);
+            SqlDataReader dataReader = command.ExecuteReader();
+            int i = 0;
+            while(dataReader.Read())
+            {
+                i++;
+            }
+            if(i > 0)
+            {
+                existe = true;
+            }
 
+            dataReader.Close();
+            command.Dispose();
 
             return existe;
         }
@@ -30,8 +44,21 @@ namespace TP1_2
         private bool checkForFournisseur()
         {
             bool existe = false;
-            // select Fournisseur
+            String sqlString = "SELECT FROM Fournisseur";
+            SqlCommand command = new SqlCommand(sqlString, Program.connection);
+            SqlDataReader dataReader = command.ExecuteReader();
+            int i = 0;
+            while (dataReader.Read())
+            {
+                i++;
+            }
+            if (i > 0)
+            {
+                existe = true;
+            }
 
+            dataReader.Close();
+            command.Dispose();
 
             return existe;
         }
