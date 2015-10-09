@@ -22,11 +22,73 @@ namespace TP1_2
 
         private void Form_InventaireListe_Load(object sender, EventArgs e)
         {
-            String sqlString = "SELECT IdInventaire, DescriptionInventaire, IdFournisseur, QteStock, QteMinimum, QteMaximum FROM Inventaire";
-            
-            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
-            commandAdapter.Fill(dataSet);
-            DGV_Liste.DataSource = dataSet;
+            selectInventaire();
+        }
+        private void selectInventaire()
+        {
+            dataSet = new DataTable();
+            if (TBX_Description.Text.Length > 0)
+            {
+                String sqlString = "SELECT IdInventaire, DescriptionInventaire, IdFournisseur, QteStock, QteMinimum, QteMaximum FROM Inventaire"
+                + " where DescriptionInventaire LIKE '%" + TBX_Description.Text + "%'";
+                SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+                commandAdapter.Fill(dataSet);
+                DGV_Liste.DataSource = dataSet;
+            }
+            else
+            {
+                String sqlString = "SELECT IdInventaire, DescriptionInventaire, IdFournisseur, QteStock, QteMinimum, QteMaximum FROM Inventaire";
+                SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+                commandAdapter.Fill(dataSet);
+                DGV_Liste.DataSource = dataSet;
+            }
+            DGV_Liste.Refresh();
+        }
+        private void selectInventaireToBuy()
+        {
+            dataSet = new DataTable();
+            if (TBX_Description.Text.Length > 0)
+            {
+                String sqlString = "SELECT IdInventaire, DescriptionInventaire, IdFournisseur, QteStock, QteMinimum, QteMaximum, QteMaximum - QteStock AS Acheter FROM Inventaire"
+                + " where DescriptionInventaire LIKE '%" + TBX_Description.Text + "%'"
+                + " and QteStock <= QteMinimum";
+                SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+                commandAdapter.Fill(dataSet);
+                DGV_Liste.DataSource = dataSet;
+            }
+            else
+            {
+                String sqlString = "SELECT IdInventaire, DescriptionInventaire, IdFournisseur, QteStock, QteMinimum, QteMaximum, QteMaximum - QteStock AS Acheter FROM Inventaire"
+                    + " Where QteStock <= QteMinimum";
+                SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+                commandAdapter.Fill(dataSet);
+                DGV_Liste.DataSource = dataSet;
+            }
+            DGV_Liste.Refresh();
+        }
+
+        private void TBX_Description_TextChanged(object sender, EventArgs e)
+        {
+            if(CHBX_Besoin.Checked)
+            {
+                selectInventaireToBuy();
+            }
+            else
+            {
+                selectInventaire();
+            }
+        }
+
+        private void CHBX_Besoin_CheckedChanged(object sender, EventArgs e)
+        {
+            if(CHBX_Besoin.Checked)
+            {
+                selectInventaireToBuy();
+            }
+            else
+            {
+                selectInventaire();
+            }
         }
     }
 }

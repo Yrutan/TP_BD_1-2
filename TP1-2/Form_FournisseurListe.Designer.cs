@@ -50,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(611, 345);
             this.Controls.Add(this.DGV_Liste);
             this.Name = "Form_FournisseurListe";
-            this.Text = "Form_Fournisseur";
+            this.Text = "Liste des fournisseurs";
             this.Load += new System.EventHandler(this.Form_FournisseurListe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Liste)).EndInit();
             this.ResumeLayout(false);
