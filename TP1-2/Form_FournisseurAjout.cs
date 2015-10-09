@@ -28,7 +28,7 @@ namespace TP1_2
             }
             else
             {
-                MessageBox.Show("Erreur Lors de l'ajout");
+                MessageBox.Show("Erreur durant l'ajout");
             }
         }
 
@@ -46,7 +46,7 @@ namespace TP1_2
             }
             else
             {
-                MessageBox.Show("Erreur Lors de l'ajout");
+                MessageBox.Show("Erreur durant l'ajout");
             }
 
             insert.Dispose();
