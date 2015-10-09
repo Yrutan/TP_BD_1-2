@@ -90,10 +90,6 @@ namespace TP1_2
                     // ou dans le form ajouter ?
 
                 }
-                else
-                {
-                    // rien, l'opération est annulé
-                }
             }
             else
             {
@@ -161,8 +157,6 @@ namespace TP1_2
                 MessageBox.Show("Un fournisseur doit exister pour pouvoir en modifier un!");
             }
         }
-
-
 
 
     }

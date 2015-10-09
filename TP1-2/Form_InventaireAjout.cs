@@ -15,10 +15,14 @@ namespace TP1_2
         public Form_InventaireAjout()
         {
             InitializeComponent();
+
+            fillCBX_Fournisseur();
         }
 
-        // vérifier si un fournisseur existe
-        // sinon ne pas afficher la fenetre et faire un popup
-        // faire ça dans le main form
+
+        private void fillCBX_Fournisseur()
+        {
+
+        }
     }
 }
