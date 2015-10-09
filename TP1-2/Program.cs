@@ -22,13 +22,13 @@ namespace TP1_2
         {
             //les valeurs sont celles par défaut de l'exemple
             // datasource est le chemin à la bd ?
-            String dataSource = @"PBRUNETD\\SQLEXPRESS";
+            String dataSource = @"local";
             // initial Catalog est le nom de la bd
-            String nameBD = "MaBD";
+            String nameBD = "BDOperation.mdf";
             // user ID est le nom utiliser pour la connection à la bd
-            String userId = "maConnexion";
+            String userId = "conOperation";
             // password est le mot de passe du user ID pour se connecter à la bd
-            String pass = "connexion";
+            String pass = "conOperation";
             String chaineConnection = "Data Source="+dataSource+";Initial Catalog="+nameBD+";User ID="+ userId +";Password=" + pass;
             connection = new SqlConnection(chaineConnection);
             try
