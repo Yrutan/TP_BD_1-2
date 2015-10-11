@@ -48,11 +48,10 @@
             // 
             // BTN_Accept
             // 
-            this.BTN_Accept.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BTN_Accept.Location = new System.Drawing.Point(12, 215);
             this.BTN_Accept.Name = "BTN_Accept";
             this.BTN_Accept.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Accept.TabIndex = 0;
+            this.BTN_Accept.TabIndex = 8;
             this.BTN_Accept.Text = "Ajouter";
             this.BTN_Accept.UseVisualStyleBackColor = true;
             this.BTN_Accept.Click += new System.EventHandler(this.BTN_Accept_Click);
@@ -63,9 +62,10 @@
             this.BTN_Annuler.Location = new System.Drawing.Point(187, 215);
             this.BTN_Annuler.Name = "BTN_Annuler";
             this.BTN_Annuler.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Annuler.TabIndex = 0;
+            this.BTN_Annuler.TabIndex = 9;
             this.BTN_Annuler.Text = "Annuler";
             this.BTN_Annuler.UseVisualStyleBackColor = true;
+            this.BTN_Annuler.Click += new System.EventHandler(this.BTN_Annuler_Click);
             // 
             // label1
             // 
@@ -135,21 +135,21 @@
             this.TBX_Nom.Location = new System.Drawing.Point(153, 16);
             this.TBX_Nom.Name = "TBX_Nom";
             this.TBX_Nom.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Nom.TabIndex = 4;
+            this.TBX_Nom.TabIndex = 1;
             // 
             // TBX_Adresse
             // 
             this.TBX_Adresse.Location = new System.Drawing.Point(153, 42);
             this.TBX_Adresse.Name = "TBX_Adresse";
             this.TBX_Adresse.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Adresse.TabIndex = 4;
+            this.TBX_Adresse.TabIndex = 2;
             // 
             // TBX_Ville
             // 
             this.TBX_Ville.Location = new System.Drawing.Point(153, 68);
             this.TBX_Ville.Name = "TBX_Ville";
             this.TBX_Ville.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Ville.TabIndex = 4;
+            this.TBX_Ville.TabIndex = 3;
             // 
             // TBX_CP
             // 
@@ -163,25 +163,24 @@
             this.TBX_Telephone.Location = new System.Drawing.Point(153, 120);
             this.TBX_Telephone.Name = "TBX_Telephone";
             this.TBX_Telephone.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Telephone.TabIndex = 4;
+            this.TBX_Telephone.TabIndex = 5;
             // 
             // TBX_Solde
             // 
             this.TBX_Solde.Location = new System.Drawing.Point(153, 147);
             this.TBX_Solde.Name = "TBX_Solde";
             this.TBX_Solde.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Solde.TabIndex = 4;
+            this.TBX_Solde.TabIndex = 6;
             // 
             // TBX_Courriel
             // 
             this.TBX_Courriel.Location = new System.Drawing.Point(153, 175);
             this.TBX_Courriel.Name = "TBX_Courriel";
             this.TBX_Courriel.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Courriel.TabIndex = 4;
+            this.TBX_Courriel.TabIndex = 7;
             // 
             // Form_FournisseurAjout
             // 
-            this.AcceptButton = this.BTN_Accept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Annuler;

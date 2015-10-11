@@ -28,7 +28,7 @@ namespace TP1_2
             }
             else
             {
-                MessageBox.Show("Erreur durant l'ajout");
+                MessageBox.Show("Valeur entrée invalide");
             }
         }
 
@@ -80,10 +80,6 @@ namespace TP1_2
 
                     isvalid = true;
                 }
-                else
-                {
-                    MessageBox.Show("Valeur non valide");
-                }
             }
             catch (Exception e)
             {
@@ -91,6 +87,11 @@ namespace TP1_2
                 isvalid = false;
             }
             return isvalid;
+        }
+
+        private void BTN_Annuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

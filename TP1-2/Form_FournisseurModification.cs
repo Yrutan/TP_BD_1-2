@@ -17,41 +17,70 @@ namespace TP1_2
 
         DataTable dt_Fournisseur = new DataTable();
 
+        bool _effacer = false;
         public Form_FournisseurModification()
         {
             InitializeComponent();
         }
+        public Form_FournisseurModification(bool effacer)
+        {
+            InitializeComponent();
+            _effacer = effacer;
+        }
 
         private void BTN_Accept_Click(object sender, EventArgs e)
         {
-            if (IsValidValue())
+            if(_effacer)
             {
-                UpdateFournisseur(id);
-                ClearTextBox();
+                effacerFournisseur();
             }
             else
             {
-                MessageBox.Show("Erreur Lors de l'update");
+                if (IsValidValue())
+                {
+                    UpdateFournisseur();
+                    ClearTextBox();
+                }
+                else
+                {
+                    MessageBox.Show("Erreur Lors de l'update");
+                }
             }
         }
 
-        private void UpdateFournisseur(String id)
+        private void effacerFournisseur()
+        {
+            String deleteCommand = "Delete FROM Fournisseur " +
+                                 " WHERE IdFournisseur =" + CBX_Fournisseur.SelectedValue;
+            SqlCommand delete = new SqlCommand(deleteCommand, Program.connection);
+            try
+            {
+                delete.ExecuteNonQuery();
+                delete.Dispose();
+                MessageBox.Show("Fournisseur effacé");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        private void UpdateFournisseur()
         {
 
-            String updateQuery = "UPDATE FOURNISSEUR SET NomFournisseur = '" + CBX_Fournisseur.SelectedText + "'," +
+            String updateQuery = "UPDATE FOURNISSEUR SET NomFournisseur = '" + CBX_Fournisseur.Text + "'," +
                                  " AdFournisseur ='" + TBX_Adresse.Text + "'," +
                                  " VilleFournisseur = '" + TBX_Ville.Text + "'," +
                                  " CPFournisseur = '" + TBX_CP.Text + "'," +
-                                 " TelFournisseur =" + TBX_Telephone.Text + "," +
-                                 " SoldeFournisseur = '" + TBX_Solde.Text + "' " +
+                                 " TelFournisseur ='" + TBX_Telephone.Text + "'," +
+                                 " SoldeFournisseur = " + TBX_Solde.Text.Replace(',', '.') + ", " +
                                  " CourrielFournisseur = '" + TBX_Courriel.Text + "' " +
                                  " WHERE IdFournisseur =" + CBX_Fournisseur.SelectedValue;
-            MessageBox.Show(updateQuery);
             SqlCommand update = new SqlCommand(updateQuery, Program.connection);
             try
             {
                 update.ExecuteNonQuery();
                 update.Dispose();
+                MessageBox.Show("Modification réussie!");
             }
             catch (Exception e)
             {
@@ -82,7 +111,7 @@ namespace TP1_2
                     && !String.IsNullOrEmpty(TBX_Telephone.Text)
                     && !String.IsNullOrEmpty(TBX_Ville.Text)
                     && !String.IsNullOrEmpty(TBX_Courriel.Text)
-                    && Int32.Parse(TBX_Solde.Text) >= 0)
+                    && !String.IsNullOrEmpty(TBX_Solde.Text))
                 {
 
                     isvalid = true;
@@ -102,6 +131,16 @@ namespace TP1_2
 
         private void Form_FournisseurModification_Load(object sender, EventArgs e)
         {
+            if(_effacer)
+            {
+                TBX_Adresse.Enabled = false;
+                TBX_Ville.Enabled = false;
+                TBX_CP.Enabled = false;
+                TBX_Telephone.Enabled = false;
+                TBX_Solde.Enabled = false;
+                TBX_Courriel.Enabled = false;
+                BTN_Accept.Text = "effacer";
+            }
             fillCBX_Fournisseur();
         }
         private void fillCBX_Fournisseur()
@@ -117,10 +156,9 @@ namespace TP1_2
 
             CBX_Fournisseur.SelectedIndex = 0;
         }
-
         private void CBX_Fournisseur_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(CBX_Fournisseur.SelectedIndex > 0)
+            if(CBX_Fournisseur.SelectedIndex > -1)
             {
                 TBX_Adresse.Text = dt_Fournisseur.Rows[CBX_Fournisseur.SelectedIndex][2].ToString();
                 TBX_Ville.Text = dt_Fournisseur.Rows[CBX_Fournisseur.SelectedIndex][3].ToString();

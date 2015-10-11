@@ -34,21 +34,24 @@
             this.TBX_QMax = new System.Windows.Forms.TextBox();
             this.TBX_QMin = new System.Windows.Forms.TextBox();
             this.TBX_QStock = new System.Windows.Forms.TextBox();
-            this.TBX_Description = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.CBX_IdProduit = new System.Windows.Forms.ComboBox();
+            this.TBX_Description = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BTN_Annuler
             // 
+            this.BTN_Annuler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Annuler.Location = new System.Drawing.Point(155, 176);
+            this.BTN_Annuler.Location = new System.Drawing.Point(205, 176);
             this.BTN_Annuler.Name = "BTN_Annuler";
             this.BTN_Annuler.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Annuler.TabIndex = 3;
+            this.BTN_Annuler.TabIndex = 8;
             this.BTN_Annuler.Text = "Annuler";
             this.BTN_Annuler.UseVisualStyleBackColor = true;
             // 
@@ -58,51 +61,52 @@
             this.BTN_Accept.Location = new System.Drawing.Point(7, 176);
             this.BTN_Accept.Name = "BTN_Accept";
             this.BTN_Accept.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Accept.TabIndex = 4;
+            this.BTN_Accept.TabIndex = 7;
             this.BTN_Accept.Text = "Modifier";
             this.BTN_Accept.UseVisualStyleBackColor = true;
             this.BTN_Accept.Click += new System.EventHandler(this.BTN_Accept_Click);
             // 
             // CBX_Fournisseur
             // 
+            this.CBX_Fournisseur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CBX_Fournisseur.FormattingEnabled = true;
-            this.CBX_Fournisseur.Location = new System.Drawing.Point(130, 35);
+            this.CBX_Fournisseur.Location = new System.Drawing.Point(130, 64);
             this.CBX_Fournisseur.Name = "CBX_Fournisseur";
-            this.CBX_Fournisseur.Size = new System.Drawing.Size(100, 21);
-            this.CBX_Fournisseur.TabIndex = 15;
+            this.CBX_Fournisseur.Size = new System.Drawing.Size(150, 21);
+            this.CBX_Fournisseur.TabIndex = 3;
             // 
             // TBX_QMax
             // 
-            this.TBX_QMax.Location = new System.Drawing.Point(130, 127);
+            this.TBX_QMax.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_QMax.Location = new System.Drawing.Point(130, 151);
             this.TBX_QMax.Name = "TBX_QMax";
-            this.TBX_QMax.Size = new System.Drawing.Size(100, 20);
-            this.TBX_QMax.TabIndex = 11;
+            this.TBX_QMax.Size = new System.Drawing.Size(150, 20);
+            this.TBX_QMax.TabIndex = 6;
             // 
             // TBX_QMin
             // 
-            this.TBX_QMin.Location = new System.Drawing.Point(130, 98);
+            this.TBX_QMin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_QMin.Location = new System.Drawing.Point(130, 122);
             this.TBX_QMin.Name = "TBX_QMin";
-            this.TBX_QMin.Size = new System.Drawing.Size(100, 20);
-            this.TBX_QMin.TabIndex = 12;
+            this.TBX_QMin.Size = new System.Drawing.Size(150, 20);
+            this.TBX_QMin.TabIndex = 5;
             // 
             // TBX_QStock
             // 
-            this.TBX_QStock.Location = new System.Drawing.Point(130, 69);
+            this.TBX_QStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_QStock.Location = new System.Drawing.Point(130, 93);
             this.TBX_QStock.Name = "TBX_QStock";
-            this.TBX_QStock.Size = new System.Drawing.Size(100, 20);
-            this.TBX_QStock.TabIndex = 13;
-            // 
-            // TBX_Description
-            // 
-            this.TBX_Description.Location = new System.Drawing.Point(130, 6);
-            this.TBX_Description.Name = "TBX_Description";
-            this.TBX_Description.Size = new System.Drawing.Size(100, 20);
-            this.TBX_Description.TabIndex = 14;
+            this.TBX_QStock.Size = new System.Drawing.Size(150, 20);
+            this.TBX_QStock.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 130);
+            this.label5.Location = new System.Drawing.Point(12, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 6;
@@ -111,7 +115,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 101);
+            this.label4.Location = new System.Drawing.Point(12, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 7;
@@ -120,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 72);
+            this.label3.Location = new System.Drawing.Point(12, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 8;
@@ -129,7 +133,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 38);
+            this.label2.Location = new System.Drawing.Point(12, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 9;
@@ -140,9 +144,38 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Description du produit :";
+            this.label1.Text = "Identifiant du produit : ";
+            // 
+            // CBX_IdProduit
+            // 
+            this.CBX_IdProduit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBX_IdProduit.FormattingEnabled = true;
+            this.CBX_IdProduit.Location = new System.Drawing.Point(130, 9);
+            this.CBX_IdProduit.Name = "CBX_IdProduit";
+            this.CBX_IdProduit.Size = new System.Drawing.Size(150, 21);
+            this.CBX_IdProduit.TabIndex = 1;
+            this.CBX_IdProduit.SelectedIndexChanged += new System.EventHandler(this.CBX_IdProduit_SelectedIndexChanged);
+            // 
+            // TBX_Description
+            // 
+            this.TBX_Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBX_Description.Location = new System.Drawing.Point(130, 34);
+            this.TBX_Description.Name = "TBX_Description";
+            this.TBX_Description.Size = new System.Drawing.Size(150, 20);
+            this.TBX_Description.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Description du produit :";
             // 
             // Form_InventaireModification
             // 
@@ -150,12 +183,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Annuler;
-            this.ClientSize = new System.Drawing.Size(244, 206);
+            this.ClientSize = new System.Drawing.Size(294, 206);
+            this.Controls.Add(this.TBX_Description);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.CBX_IdProduit);
             this.Controls.Add(this.CBX_Fournisseur);
             this.Controls.Add(this.TBX_QMax);
             this.Controls.Add(this.TBX_QMin);
             this.Controls.Add(this.TBX_QStock);
-            this.Controls.Add(this.TBX_Description);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -165,6 +200,7 @@
             this.Controls.Add(this.BTN_Accept);
             this.Name = "Form_InventaireModification";
             this.Text = "Form_InventaireModification";
+            this.Load += new System.EventHandler(this.Form_InventaireModification_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,11 +214,13 @@
         private System.Windows.Forms.TextBox TBX_QMax;
         private System.Windows.Forms.TextBox TBX_QMin;
         private System.Windows.Forms.TextBox TBX_QStock;
-        private System.Windows.Forms.TextBox TBX_Description;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CBX_IdProduit;
+        private System.Windows.Forms.TextBox TBX_Description;
+        private System.Windows.Forms.Label label6;
     }
 }

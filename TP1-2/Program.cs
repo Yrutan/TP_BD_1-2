@@ -22,7 +22,7 @@ namespace TP1_2
         {
             //les valeurs sont celles par défaut de l'exemple
             // datasource est le chemin à la bd ?
-            String dataSource = System.Environment.MachineName +"\\SQLEXPRESS2012";
+            String dataSource = System.Environment.MachineName +"\\SQLEXPRESS";
             // initial Catalog est le nom de la bd
             String nameBD = "bdOperation";
             // user ID est le nom utiliser pour la connection à la bd

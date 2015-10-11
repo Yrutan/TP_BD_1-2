@@ -69,7 +69,6 @@ namespace TP1_2
             if(checkForInventaire())
             {
                 Form_InventaireListe form = new Form_InventaireListe();
-
                 form.ShowDialog();
             }
             else
@@ -97,9 +96,7 @@ namespace TP1_2
             if(checkForInventaire())
             {
                 Form_InventaireModification form = new Form_InventaireModification();
-
                 form.ShowDialog();
-
             }
             else
             {
@@ -112,7 +109,6 @@ namespace TP1_2
             if(checkForFournisseur())
             {
                 Form_FournisseurListe form = new Form_FournisseurListe();
-
                 form.ShowDialog();
             }
             else
@@ -124,7 +120,6 @@ namespace TP1_2
         private void LTSMI_FournisseurAjout_Click(object sender, EventArgs e)
         {
             Form_FournisseurAjout form = new Form_FournisseurAjout();
-
             form.ShowDialog();
 
         }
@@ -134,9 +129,7 @@ namespace TP1_2
             if(checkForFournisseur())
             {
                 Form_FournisseurModification form = new Form_FournisseurModification();
-
                 form.ShowDialog();
-
             }
             else
             {
@@ -144,6 +137,30 @@ namespace TP1_2
             }
         }
 
+        private void LTSMI_FournisseurSupprimer_Click(object sender, EventArgs e)
+        {
+            if (checkForFournisseur())
+            {
+                Form_FournisseurModification form = new Form_FournisseurModification(true);
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Un fournisseur doit exister pour pouvoir en effacer un!");
+            }
+        }
 
+        private void LTSMI_InventaireSupprimer_Click(object sender, EventArgs e)
+        {
+            if (checkForInventaire())
+            {
+                Form_InventaireModification form = new Form_InventaireModification(true);
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Il doit exister un item dans l'inventaire pour pouvoir en effacer un!");
+            }
+        }
     }
 }

@@ -50,17 +50,16 @@
             this.BTN_Annuler.Location = new System.Drawing.Point(155, 179);
             this.BTN_Annuler.Name = "BTN_Annuler";
             this.BTN_Annuler.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Annuler.TabIndex = 1;
+            this.BTN_Annuler.TabIndex = 7;
             this.BTN_Annuler.Text = "Annuler";
             this.BTN_Annuler.UseVisualStyleBackColor = true;
             // 
             // BTN_Accept
             // 
-            this.BTN_Accept.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BTN_Accept.Location = new System.Drawing.Point(12, 179);
             this.BTN_Accept.Name = "BTN_Accept";
             this.BTN_Accept.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Accept.TabIndex = 2;
+            this.BTN_Accept.TabIndex = 6;
             this.BTN_Accept.Text = "Ajouter";
             this.BTN_Accept.UseVisualStyleBackColor = true;
             this.BTN_Accept.Click += new System.EventHandler(this.BTN_Accept_Click);
@@ -117,7 +116,7 @@
             this.TBX_Description.Location = new System.Drawing.Point(130, 6);
             this.TBX_Description.Name = "TBX_Description";
             this.TBX_Description.Size = new System.Drawing.Size(100, 20);
-            this.TBX_Description.TabIndex = 4;
+            this.TBX_Description.TabIndex = 1;
             // 
             // TBX_QStock
             // 
@@ -126,7 +125,7 @@
             this.TBX_QStock.Location = new System.Drawing.Point(130, 69);
             this.TBX_QStock.Name = "TBX_QStock";
             this.TBX_QStock.Size = new System.Drawing.Size(100, 20);
-            this.TBX_QStock.TabIndex = 4;
+            this.TBX_QStock.TabIndex = 3;
             // 
             // TBX_QMin
             // 
@@ -144,7 +143,7 @@
             this.TBX_QMax.Location = new System.Drawing.Point(130, 127);
             this.TBX_QMax.Name = "TBX_QMax";
             this.TBX_QMax.Size = new System.Drawing.Size(100, 20);
-            this.TBX_QMax.TabIndex = 4;
+            this.TBX_QMax.TabIndex = 5;
             // 
             // CBX_Fournisseur
             // 
@@ -154,11 +153,10 @@
             this.CBX_Fournisseur.Location = new System.Drawing.Point(130, 35);
             this.CBX_Fournisseur.Name = "CBX_Fournisseur";
             this.CBX_Fournisseur.Size = new System.Drawing.Size(100, 21);
-            this.CBX_Fournisseur.TabIndex = 5;
+            this.CBX_Fournisseur.TabIndex = 2;
             // 
             // Form_InventaireAjout
             // 
-            this.AcceptButton = this.BTN_Accept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Annuler;

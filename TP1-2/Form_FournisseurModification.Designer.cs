@@ -52,7 +52,7 @@
             this.BTN_Annuler.Location = new System.Drawing.Point(187, 201);
             this.BTN_Annuler.Name = "BTN_Annuler";
             this.BTN_Annuler.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Annuler.TabIndex = 1;
+            this.BTN_Annuler.TabIndex = 9;
             this.BTN_Annuler.Text = "Annuler";
             this.BTN_Annuler.UseVisualStyleBackColor = true;
             // 
@@ -62,7 +62,7 @@
             this.BTN_Accept.Location = new System.Drawing.Point(15, 201);
             this.BTN_Accept.Name = "BTN_Accept";
             this.BTN_Accept.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Accept.TabIndex = 2;
+            this.BTN_Accept.TabIndex = 8;
             this.BTN_Accept.Text = "Modifier";
             this.BTN_Accept.UseVisualStyleBackColor = true;
             this.BTN_Accept.Click += new System.EventHandler(this.BTN_Accept_Click);
@@ -72,42 +72,42 @@
             this.TBX_Courriel.Location = new System.Drawing.Point(153, 166);
             this.TBX_Courriel.Name = "TBX_Courriel";
             this.TBX_Courriel.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Courriel.TabIndex = 12;
+            this.TBX_Courriel.TabIndex = 7;
             // 
             // TBX_Solde
             // 
             this.TBX_Solde.Location = new System.Drawing.Point(153, 138);
             this.TBX_Solde.Name = "TBX_Solde";
             this.TBX_Solde.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Solde.TabIndex = 13;
+            this.TBX_Solde.TabIndex = 6;
             // 
             // TBX_Telephone
             // 
             this.TBX_Telephone.Location = new System.Drawing.Point(153, 111);
             this.TBX_Telephone.Name = "TBX_Telephone";
             this.TBX_Telephone.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Telephone.TabIndex = 14;
+            this.TBX_Telephone.TabIndex = 5;
             // 
             // TBX_CP
             // 
             this.TBX_CP.Location = new System.Drawing.Point(153, 85);
             this.TBX_CP.Name = "TBX_CP";
             this.TBX_CP.Size = new System.Drawing.Size(109, 20);
-            this.TBX_CP.TabIndex = 15;
+            this.TBX_CP.TabIndex = 4;
             // 
             // TBX_Ville
             // 
             this.TBX_Ville.Location = new System.Drawing.Point(153, 59);
             this.TBX_Ville.Name = "TBX_Ville";
             this.TBX_Ville.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Ville.TabIndex = 16;
+            this.TBX_Ville.TabIndex = 3;
             // 
             // TBX_Adresse
             // 
             this.TBX_Adresse.Location = new System.Drawing.Point(153, 33);
             this.TBX_Adresse.Name = "TBX_Adresse";
             this.TBX_Adresse.Size = new System.Drawing.Size(109, 20);
-            this.TBX_Adresse.TabIndex = 17;
+            this.TBX_Adresse.TabIndex = 2;
             // 
             // label6
             // 
@@ -178,11 +178,12 @@
             this.CBX_Fournisseur.Location = new System.Drawing.Point(153, 6);
             this.CBX_Fournisseur.Name = "CBX_Fournisseur";
             this.CBX_Fournisseur.Size = new System.Drawing.Size(109, 21);
-            this.CBX_Fournisseur.TabIndex = 19;
+            this.CBX_Fournisseur.TabIndex = 1;
             this.CBX_Fournisseur.SelectedIndexChanged += new System.EventHandler(this.CBX_Fournisseur_SelectedIndexChanged);
             // 
             // Form_FournisseurModification
             // 
+            this.AcceptButton = this.BTN_Accept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 231);
