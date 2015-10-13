@@ -25,7 +25,7 @@ namespace TP1_2
         {
             String sqlString = "SELECT IdFournisseur, NomFournisseur FROM Fournisseur";
             
-            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program._connection);
             commandAdapter.Fill(dt_Fournisseur);
             CBX_Fournisseur.DataSource = dt_Fournisseur;
             CBX_Fournisseur.DisplayMember = "NomFournisseur";
@@ -53,7 +53,7 @@ namespace TP1_2
                    "VALUES('" + desc + "', ' " + id + "', ' " + qtestock + "','" + qteminimum + "', ' " + qtemaximum + "')";
 
             SqlCommand insert = new SqlCommand(sqlInsert);
-            insert.Connection = Program.connection;
+            insert.Connection = Program._connection;
 
             if (insert.ExecuteNonQuery() >= 1)
             {

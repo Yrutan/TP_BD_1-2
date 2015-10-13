@@ -47,7 +47,7 @@ namespace TP1_2
         {
             String updateQuery = "Delete from Inventaire " +
                      " WHERE IdInventaire =" + CBX_IdProduit.Text;
-            SqlCommand update = new SqlCommand(updateQuery, Program.connection);
+            SqlCommand update = new SqlCommand(updateQuery, Program._connection);
             try
             {
                 update.ExecuteNonQuery();
@@ -68,7 +68,7 @@ namespace TP1_2
                                  " QteMinimum = '" + TBX_QMin.Text + "'," +
                                  " QteMaximum = '" + TBX_QMax.Text + "'" +
                                  " WHERE IdInventaire =" + CBX_IdProduit.Text;
-            SqlCommand update = new SqlCommand(updateQuery, Program.connection);
+            SqlCommand update = new SqlCommand(updateQuery, Program._connection);
             try
             {
                 update.ExecuteNonQuery();
@@ -137,7 +137,7 @@ namespace TP1_2
             dt_Fournisseur = new DataTable();
             String sqlString = "SELECT IdFournisseur, NomFournisseur, AdFournisseur, VilleFournisseur, CPFournisseur, TelFournisseur, SoldeFournisseur, CourrielFournisseur FROM Fournisseur";
 
-            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program._connection);
             commandAdapter.Fill(dt_Fournisseur);
             CBX_Fournisseur.DataSource = dt_Fournisseur;
             CBX_Fournisseur.DisplayMember = "NomFournisseur";
@@ -151,7 +151,7 @@ namespace TP1_2
         {
             dt_Inventaire = new DataTable();
             String sqlString = "SELECT IdInventaire, DescriptionInventaire, IdFournisseur, QteStock, QteMinimum, QteMaximum FROM Inventaire";
-            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program._connection);
             commandAdapter.Fill(dt_Inventaire);
 
             CBX_IdProduit.DataSource = dt_Inventaire;

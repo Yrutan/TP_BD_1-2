@@ -24,7 +24,7 @@ namespace TP1_2
         {
             String sqlString = "SELECT IdFournisseur, NomFournisseur, VilleFournisseur, CPFournisseur, TelFournisseur, SoldeFournisseur FROM Fournisseur";
             
-            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program._connection);
             commandAdapter.Fill(dataSet);
             DGV_Liste.DataSource = dataSet;
         }

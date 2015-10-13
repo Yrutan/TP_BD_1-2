@@ -37,7 +37,7 @@ namespace TP1_2
             {
                 sqlString = "SELECT IdInventaire, DescriptionInventaire, IdFournisseur, QteStock, QteMinimum, QteMaximum FROM Inventaire";
             }
-            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program._connection);
             commandAdapter.Fill(dataSet);
             DGV_Liste.DataSource = dataSet;
             DGV_Liste.Refresh();
@@ -58,7 +58,7 @@ namespace TP1_2
                     + " Where QteStock < QteMinimum";
                 
             }
-            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program._connection);
             commandAdapter.Fill(dataSet);
             DGV_Liste.DataSource = dataSet;
             DGV_Liste.Refresh();

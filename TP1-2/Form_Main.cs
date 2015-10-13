@@ -23,7 +23,7 @@ namespace TP1_2
         {
             bool existe = false;
             String sqlString = "SELECT * FROM Inventaire";
-            SqlCommand command = new SqlCommand(sqlString,Program.connection);
+            SqlCommand command = new SqlCommand(sqlString,Program._connection);
             SqlDataReader dataReader = command.ExecuteReader();
             int i = 0;
             while(dataReader.Read())
@@ -45,7 +45,7 @@ namespace TP1_2
         {
             bool existe = false;
             String sqlString = "SELECT * FROM Fournisseur";
-            SqlCommand command = new SqlCommand(sqlString, Program.connection);
+            SqlCommand command = new SqlCommand(sqlString, Program._connection);
             SqlDataReader dataReader = command.ExecuteReader();
             int i = 0;
             while (dataReader.Read())
@@ -161,6 +161,13 @@ namespace TP1_2
             {
                 MessageBox.Show("Il doit exister un item dans l'inventaire pour pouvoir en effacer un!");
             }
+        }
+
+        private void TSMI_Rapports_Click(object sender, EventArgs e)
+        {
+            Form_Rapport form = new Form_Rapport();
+
+            form.ShowDialog();
         }
     }
 }

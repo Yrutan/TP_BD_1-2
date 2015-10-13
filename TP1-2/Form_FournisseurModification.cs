@@ -52,7 +52,7 @@ namespace TP1_2
         {
             String deleteCommand = "Delete FROM Fournisseur " +
                                  " WHERE IdFournisseur =" + CBX_Fournisseur.SelectedValue;
-            SqlCommand delete = new SqlCommand(deleteCommand, Program.connection);
+            SqlCommand delete = new SqlCommand(deleteCommand, Program._connection);
             try
             {
                 delete.ExecuteNonQuery();
@@ -75,7 +75,7 @@ namespace TP1_2
                                  " SoldeFournisseur = " + TBX_Solde.Text.Replace(',', '.') + ", " +
                                  " CourrielFournisseur = '" + TBX_Courriel.Text + "' " +
                                  " WHERE IdFournisseur =" + CBX_Fournisseur.SelectedValue;
-            SqlCommand update = new SqlCommand(updateQuery, Program.connection);
+            SqlCommand update = new SqlCommand(updateQuery, Program._connection);
             try
             {
                 update.ExecuteNonQuery();
@@ -147,7 +147,7 @@ namespace TP1_2
         {
             String sqlString = "SELECT IdFournisseur, NomFournisseur, AdFournisseur, VilleFournisseur, CPFournisseur, TelFournisseur, SoldeFournisseur, CourrielFournisseur FROM Fournisseur";
 
-            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program.connection);
+            SqlDataAdapter commandAdapter = new SqlDataAdapter(sqlString, Program._connection);
             commandAdapter.Fill(dt_Fournisseur);
             CBX_Fournisseur.DataSource = dt_Fournisseur;
             CBX_Fournisseur.DisplayMember = "NomFournisseur";

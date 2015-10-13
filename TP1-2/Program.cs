@@ -11,7 +11,7 @@ namespace TP1_2
     {
         //l'objet connection utilisé partout dans l'application
         //pourrait être modifié pour une fonction avec une valeur de retour qui retourne la connection
-        public static SqlConnection connection;
+        public static SqlConnection _connection;
 
 
         /// <summary>
@@ -29,13 +29,12 @@ namespace TP1_2
             String userId = "conOperation";
             // password est le mot de passe du user ID pour se connecter à la bd
             String pass = "conOperation";
-
+            
             String chaineConnection = "Data Source="+dataSource+";Initial Catalog="+nameBD+";User ID="+ userId +";Password=" + pass;
-            connection = new SqlConnection(chaineConnection);
- 
+            _connection = new SqlConnection(chaineConnection);
             try
             {
-                connection.Open();
+                _connection.Open();
             }
             catch(Exception ex)
             {

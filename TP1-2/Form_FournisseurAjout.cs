@@ -38,7 +38,7 @@ namespace TP1_2
                    "VALUES('" + nom + "', ' " + adresse + "', ' " + ville + "','" + codep + "', ' " + tel + "'," + solde + ", ' " + courriel + "')";
 
             SqlCommand insert = new SqlCommand(sqlInsert);
-            insert.Connection = Program.connection;
+            insert.Connection = Program._connection;
 
             if (insert.ExecuteNonQuery() >= 1)
             {

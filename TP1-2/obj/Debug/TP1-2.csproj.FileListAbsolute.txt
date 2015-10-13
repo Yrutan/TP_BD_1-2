@@ -49,4 +49,14 @@ C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Form_InventaireMod
 C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Form_Main.resources
 C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Properties.Resources.resources
 C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\obj\Debug\TP1-2.csproj.GenerateResource.Cache
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\obj\Debug\TP1_2.Form_Rapport.resources
 C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\obj\Debug\TP1-2.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\crdb_adoplus.dll
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\CR_EtiquetteFournisseur.rpt
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\CR_ProduitFournisseur.rpt
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\CR_EtiquetteFournisseur.cs
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\CR_ProduitFournisseur.cs
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\CR_ListeFournisseur.rpt
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\CR_ListeFournisseur.cs
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\CR_ProduitAcheter.rpt
+C:\Users\Simon\Desktop\GitHub\TP_BD_1-2\TP1-2\bin\Debug\CR_ProduitAcheter.cs
